@@ -1,6 +1,6 @@
 import css from "./ImageCard.module.css";
 
-export default function ImageCard({ small, regular, altDescription }) {
+export default function ImageCard({ small, regular, altDescription, onClick }) {
   return (
     <div className={css.imageBorder}>
       <img
@@ -8,6 +8,7 @@ export default function ImageCard({ small, regular, altDescription }) {
         src={small}
         data-modal={regular}
         alt={altDescription}
+        onClick={onClick}
       />
     </div>
   );

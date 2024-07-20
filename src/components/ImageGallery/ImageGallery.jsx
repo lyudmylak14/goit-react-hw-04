@@ -14,7 +14,7 @@ export default function ImageGallery({ images, onTarget }) {
   };
 
   return (
-    <ul className={css.list} onClick={targetImage}>
+    <ul className={css.list} >
       {images.map(({ urls, alt_description, id }) => {
         const { small, regular } = urls;
         return (
@@ -23,6 +23,7 @@ export default function ImageGallery({ images, onTarget }) {
               small={small}
               regular={regular}
               altDescription={alt_description}
+              onClick={targetImage}
             />
           </li>
         );
